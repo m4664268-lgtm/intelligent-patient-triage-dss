@@ -1,24 +1,25 @@
 {
-  "name": "net-film",
+  "name": "net-business-solutions-film",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "NET Business Solutions — 45s cinematic corporate film (Remotion, 4K 30fps)",
   "scripts": {
     "studio": "remotion studio src/index.js",
-    "preview:opening": "remotion render src/index.js OpeningPreview out/preview-opening-1080p.mp4 --scale=0.5 --crf=16 --audio-codec=aac --audio-bitrate=320k",
-    "render:4k": "remotion render src/index.js NETFilm out/NET-Business-Solutions-4K.mp4 --crf=14 --audio-codec=aac --audio-bitrate=320k",
-    "audio": "python3 scripts/generate-audio.py"
+    "preview:opening": "remotion render src/index.js OpeningPreview out/preview-opening-1080p.mp4 --scale=0.5 --crf=16 --audio-codec=aac --audio-bitrate=320k --timeout=120000",
+    "preview:full": "remotion render src/index.js NETFilm out/preview-full-1080p.mp4 --scale=0.5 --crf=18 --audio-codec=aac --audio-bitrate=320k --timeout=120000",
+    "render:4k": "remotion render src/index.js NETFilm out/NET-Business-Solutions-4K.mp4 --crf=14 --audio-codec=aac --audio-bitrate=320k --timeout=120000",
+    "still": "remotion still src/index.js NETFilm out/still.png --frame=1340",
+    "audio": "python3 scripts/generate-audio.py",
+    "voiceover": "python3 scripts/generate-voiceover.py"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@fontsource/alexandria": "^5.1.1",
-    "@fontsource/ibm-plex-sans-arabic": "^5.1.1",
-    "@remotion/cli": "^4.0.350",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "remotion": "^4.0.350"
+    "@remotion/cli": "4.0.350",
+    "@remotion/motion-blur": "4.0.350",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.350"
   },
-  "private": true
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
 }

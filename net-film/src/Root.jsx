@@ -1,9 +1,9 @@
 import React from 'react';
 import { Composition } from 'remotion';
 import { MainVideo } from './MainVideo';
-import { Opening } from './scenes/Opening';
 import { FPS, WIDTH, HEIGHT, TOTAL_FRAMES, SCENES } from './timeline';
 import './styles/global.css';
+
 
 export const RemotionRoot = () => (
   <>

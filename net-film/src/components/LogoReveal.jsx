@@ -32,7 +32,7 @@ export const LogoReveal = ({ revealAt = 54, size = 1440, left, top, shines = [8,
 
   const scale = f < 40 ? lerp(f, [0, 40], [1.1, 1.0]) : lerp(f, [40, endAt - revealAt], [1.0, settleTo], easeInOut);
   const blur = lerp(f, [0, 20], [22, 0]);
-  const bright = lerp(f, [0, 30], [2.4, 1]);
+  const bright = lerp(f, [0, 30], [1.7, 1]);
   const wipe = lerp(f, [-2, 24], [-20, 125], easeInOut);
   const transitioning = f < 31;
 
