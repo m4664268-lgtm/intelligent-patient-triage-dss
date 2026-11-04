@@ -1,0 +1,12 @@
+@import '@fontsource/alexandria/arabic-800.css';
+@import '@fontsource/alexandria/arabic-500.css';
+@import '@fontsource/alexandria/latin-600.css';
+@import '@fontsource/ibm-plex-sans-arabic/arabic-500.css';
+@import '@fontsource/ibm-plex-sans-arabic/arabic-700.css';
+
+:root {
+  --gold: #d9b47a; --gold-hi: #f6e2b3; --bronze: #8a5a2b; --champagne: #efd9b0;
+  --navy: #050b18; --navy-2: #0a1830; --electric: #2f8cff; --cyan: #5fe1ff;
+}
+* { box-sizing: border-box; }
+.ar { direction: rtl; unicode-bidi: isolate; font-family: 'Alexandria', 'IBM Plex Sans Arabic', 'Noto Naskh Arabic', sans-serif; font-feature-settings: 'kern', 'liga', 'calt'; }
